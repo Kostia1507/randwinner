@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../assets/homeStyle.css"/>
+    <title>RandWinner</title>
+</head>
+<body>
+    <%
+        const dateStarted = contest.started.toLocaleDateString();
+        const timeStarted = contest.started.toLocaleTimeString();
+        const dateTimeStarted = `${dateStarted} ${timeStarted}`;
+        const dateFinished = contest.finished.toLocaleDateString();
+        const timeFinished = contest.finished.toLocaleTimeString();
+        const dateTimeFinished = `${dateFinished} ${timeFinished}`;
+    %>
+    <div class = "left-column">
+        <h1 class="text">Автор: <%=owner.email%></h1>
+        <h2 class="text"><%=contest.description%></h2>
+        <h2 class="text">Переможців: <%=contest.winnersCount%></h2>
+        <h3 class="text">Початок: <%=dateTimeStarted%></h3>
+        <h3 class="text">Кінець: <%=dateTimeFinished%></h3>
+        <%
+        if(contest.owner === user.id){
+        %>
+            <h2 class="text">ID: <%=contest.id%> Пароль: <%=contest.password%></h2>
+            <button class="contest-button" data-mydata="<%=contest.id%>"
+                onclick="redirectTo('/finish-contest')">Розіграти</button>
+            <button class="contest-button" data-mydata="<%=contest.id%>"
+                onclick="redirectTo('/report')">Звіт</button>
+        <%
+        }
+        %>
+        <br/><br/>
+        <% if(winners.length > 0){%>
+            <h2 class="text">Виграли: </h2>
+            <% winners.forEach((item) => {%>
+            <h3 class="text"><%=item.email%></h3>
+            <%})%>
+        <%}%>
+    </div>
+    <div class = "right-column">
+        <h2 class="right-text">Учасники:</h2>
+        <% members.forEach((item) => {%>
+        <h3 class="right-text"><%=item.email%></h3>
+        <%})%>
+    </div>
+</body>
+</html>
+<script>
+    function redirectTo(path) {
+        window.location.href = path+"/"+event.target.getAttribute('data-mydata');
+    }
+</script>

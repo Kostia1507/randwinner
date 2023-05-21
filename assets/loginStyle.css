@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#2c2d31;
+}
+.login{
+    width: 382px;
+    overflow: hidden;
+    margin: auto;
+    padding: 80px;
+    border-radius: 15px ;
+}
+h1{
+    width: 300px;
+    text-align: center;
+    color: #d4dbe0;
+}
+h2{
+    width: 300px;
+    text-align: center;
+    color: black;
+    padding: 20px;
+    border-radius: 3px;
+    background: gray;
+}
+label{
+    color: #d4dbe0;
+    font-size: 17px;
+}
+#Email{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+    color: #d4dbe0;
+    background: #3f4045;
+}
+#Pass{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+    color: #d4dbe0;
+    background: #3f4045;
+}
+#Bio{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+    color: #d4dbe0;
+    background: #3f4045;
+}
+#log{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 8px;
+    color: #d4dbe0;
+    background: #3f4045;
+}
+.loginLinkForm{
+    width: 300px;
+    height: 30px;
+    text-align: center;
+}
+#loginLink{
+    text-decoration: none;
+    color: #d4dbe0;
+    text-align: center;
+}
+
+
+
+

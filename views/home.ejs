@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../assets/homeStyle.css"/>
+    <title>RandWinner</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="left-nav">
+            <button class="nav-button" onclick="navRedirectTo('/newcontest')">Створити</button>
+            <button class="nav-button" onclick="navRedirectTo('/join-contest')">Приєднатися</button>
+            <button class="nav-button" onclick="navRedirectTo('/mycontests')">Мої конкурси</button>
+        </div>
+        <div class="right-nav">
+            <h3 class="userName"><%= user.email %></h3>
+        </div>
+    </div>
+    <div>
+        <%contests.forEach((item) => { %>
+                <div class="contest">
+                    <%
+                        const dateFinished = item.finished.toLocaleDateString();
+                        const timeFinished = item.finished.toLocaleTimeString();
+                        const dateTimeFinished = `${dateFinished} ${timeFinished}`;
+                    %>
+                    <h5 class="text">Кінець: <%=dateTimeFinished%></h5>
+                    <h4 class="text"><%= item.description%></h4>
+                    <button class="contest-button" data-mydata="<%= item.id%>"
+                    onclick="redirectTo('/contest')">Переглянути детальніше</button>
+                </div>
+            <% })%>
+    </div>
+</body>
+</html>
+<script>
+    function navRedirectTo(path) {
+        window.location.href = path
+    }
+    function redirectTo(path) {
+        window.location.href = path+"/"+event.target.getAttribute('data-mydata');
+    }
+</script>

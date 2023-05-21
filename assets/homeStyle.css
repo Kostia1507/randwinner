@@ -1,0 +1,88 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color:#2c2d31;
+}
+.nav-bar{
+    overflow: hidden;
+    margin: auto;
+    height: 7%;
+    padding: 10px;
+    background-color:#1c1d21;
+}
+.userName{
+    margin-right: 20px;
+    text-align: right;
+    color: #d4dbe0;
+}
+.text{
+    margin-left: 20px;
+    text-align: left;
+    color: #d4dbe0;
+}
+label{
+    text-align: left;
+    color: #d4dbe0;
+}
+.right-text{
+    margin-right: 20px;
+    text-align: right;
+    color: #d4dbe0;
+}
+.contest{
+    background-color:#3c3d41;
+    border-radius: 3px;
+}
+.contest-button{
+    background-color: #2c2d31;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    color: #b4bbc0;
+}
+.left-column {
+    float: left;
+    width: 75%;
+}
+.right-column {
+    height: 100%;
+    float: right;
+    width: 25%;
+    background-color: #343538;
+}
+.right-nav {
+    float: right;
+    width: 50%;
+}
+.left-nav {
+    height: 100%;
+    float: left;
+    width: 50%;
+}
+.nav-button{
+    background-color: #2c2d31;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    color: #b4bbc0;
+    position: relative;
+    top: 50%;
+    height: 80%;
+    transform: translateY(-50%);
+}
+.center-form{
+    width: 382px;
+    overflow: hidden;
+    margin: auto;
+    padding: 80px;
+}
+input{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+    color: #d4dbe0;
+    background: #3f4045;
+}

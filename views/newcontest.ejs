@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../assets/homeStyle.css"/>
+    <title>RandWinner</title>
+</head>
+<body>
+    <div class="center-form">
+        <form id="newcontest" method="post" action="/post-contest">
+            <h1 class="text"><b>Створення конкурсу</b></h1>
+            <br/><br/>
+            <label for="description">Опис конкурсу</label>
+            <br/>
+            <input type="text" name="description" id="description" placeholder="Опис">
+            <br/><br/>
+            <label for="password">Пароль</label>
+            <br/>
+            <input type="password" name="password" id="password" placeholder="Пароль">
+            <br/><br/>
+            <label for="finished">Кінець о </label>
+            <br/>
+            <input type="datetime-local" id="finished" name="finished">
+            <br/><br/>
+            <label for="winnersCount">Кількість переможців </label>
+            <br/>
+            <input type="number" id="winnersCount" name="winnersCount">
+            <br/><br/>
+            <input type="submit" id="datetime" name="datetime" value="Готово">
+        </form>
+    </div>
+</body>
+</html>

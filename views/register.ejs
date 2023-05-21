@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../assets/loginStyle.css"/>
+    <title>RandWinner</title>
+</head>
+<body>
+<div class="login">
+    <form id="login" method="post" action="/home">
+        <% if (isLogged){ %>
+            <h2>Некоректні дані</h2>
+        <% }%>
+        <h1><b>Реєстрація</b></h1>
+        <label for="Email">Пошта</label>
+        <br/>
+        <input type="text" name="email" id="Email" placeholder="Пошта">
+        <br/><br/>
+        <label for="Pass">Пароль</label>
+        <br/>
+        <input type="Password" name="pass" id="Pass" placeholder="Пароль">
+        <br/><br/>
+        <label for="Bio">Розкажіть про себе</label>
+        <br/>
+        <input type="text" name="bio" id="Bio" placeholder="Про себе">
+        <br/><br/>
+        <input type="submit" name="log" id="log" value="Реєстрація">
+        <br/><br/>
+        <div class = "loginLinkForm">
+            <a id="loginLink" href="/login">Вернутись до входу</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
